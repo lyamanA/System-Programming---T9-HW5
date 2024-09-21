@@ -1,0 +1,127 @@
+﻿<Window x:Class="System_Programming___T9_HW5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:System_Programming___T9_HW5"
+        mc:Ignorable="d"
+        Title="T9" Height="600" Width="200" ResizeMode="NoResize" Background="Gray">
+    <Grid >
+        <TextBox Name="InputTextBox" HorizontalAlignment="Center" Height="148"
+                 VerticalAlignment="Top" Width="180" FontSize="20" Margin="0,10,0,0" 
+                 TextChanged="InputTextBox_TextChanged" TextWrapping="Wrap"
+                 AcceptsReturn="True"/>
+
+        <TextBlock Name="SuggestedWord" HorizontalAlignment="Center" Height="30"
+           VerticalAlignment="Top" Width="180" FontSize="16" Margin="0,160,0,0" 
+           TextAlignment="Center" Foreground="LightGray" MouseDown="SuggestedWord_MouseDown" />
+
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,207,0,0" Height="108" Width="155">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="17.6"/>
+                <ColumnDefinition Width="8"/>
+                <ColumnDefinition Width="24.4"/>
+                <ColumnDefinition Width="50"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Row="0" Grid.Column="1" Content="⯅"  Width="30" Height="30" 
+                    Grid.ColumnSpan="3" Margin="10,0,10,0" Click="MoveCursorUp"/>
+
+            <Button Grid.Row="1" Grid.Column="0" Content="⯇"  Width="30" Height="30" 
+                    Margin="10,0,10,0" Click="MoveCursorLeft"/>
+
+            <Button Grid.Row="1" Grid.Column="4" Content="⯈"  Width="30" Height="30" 
+                    Margin="10,0,10,0" Click="MoveCursorRight"/>
+
+            <Button Grid.Row="2" Grid.Column="1" Content="⯆"  Width="30" Height="30" 
+                    Grid.ColumnSpan="3" Margin="10,0,10,0" Click="MoveCursorDown" />
+
+            <Button Margin="-10,15,10,-15" Grid.Row="2" Content="C" Click="DeleteButton_Click"/>
+            <Button Grid.Column="4" Margin="10,15,-10,-15" Grid.Row="2" Content="Add" Click="AddWordButton_Click"/>
+        </Grid>
+
+        <UniformGrid Rows="4" Columns="3" Margin="10,320,10,10">
+
+            <Button Content="1" Margin="5" Click="Button_Click_1"/>
+
+            <Button Margin="5" Click="Button_Click_2">
+                <StackPanel>
+                    <TextBlock Text="2" HorizontalAlignment="Center"/>
+                    <TextBlock Text="АБВГ" HorizontalAlignment="Center"/>
+                    <TextBlock Text="ABC" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+
+            <Button Margin="5" Click="Button_Click_3">
+                <StackPanel>
+                    <TextBlock Text="3" HorizontalAlignment="Center"/>
+                    <TextBlock Text="ДЕЖЗ" HorizontalAlignment="Center"/>
+                    <TextBlock Text="DEF" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+
+            <Button Margin="5" Click="Button_Click_4">
+                <StackPanel>
+                    <TextBlock Text="4" HorizontalAlignment="Center"/>
+                    <TextBlock Text="ИЙКЛ" HorizontalAlignment="Center"/>
+                    <TextBlock Text="ABC" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+
+            <Button Margin="5" Click="Button_Click_5">
+                <StackPanel>
+                    <TextBlock Text="5" HorizontalAlignment="Center"/>
+                    <TextBlock Text="МНОП" HorizontalAlignment="Center"/>
+                    <TextBlock Text="JKL" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+
+            <Button Margin="5" Click="Button_Click_6">
+                <StackPanel>
+                    <TextBlock Text="6" HorizontalAlignment="Center"/>
+                    <TextBlock Text="РСТУ" HorizontalAlignment="Center"/>
+                    <TextBlock Text="MNO" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+
+            <Button Margin="5" Click="Button_Click_7">
+                <StackPanel>
+                    <TextBlock Text="7" HorizontalAlignment="Center"/>
+                    <TextBlock Text="ФХСЧ" HorizontalAlignment="Center"/>
+                    <TextBlock Text="PQRS" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+
+            <Button Margin="5" Click="Button_Click_8">
+                <StackPanel>
+                    <TextBlock Text="8" HorizontalAlignment="Center"/>
+                    <TextBlock Text="ШЩЪЫ" HorizontalAlignment="Center"/>
+                    <TextBlock Text="TUV" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+
+            <Button Margin="5" Click="Button_Click_9">
+                <StackPanel>
+                    <TextBlock Text="9" HorizontalAlignment="Center"/>
+                    <TextBlock Text="ЬЭЮЯ" HorizontalAlignment="Center"/>
+                    <TextBlock Text="WXYZ" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+
+            <Button Content="*"  Margin="5" FontSize="30" Click="Button_Click_Star"/>
+            <Button Margin="5" Click="Button_Click_0">
+                <StackPanel>
+                    <TextBlock Text="0" HorizontalAlignment="Center"/>
+                    <TextBlock Text="+" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+            <Button Content="#" Margin="5" FontSize="30" Click="Button_Click_Hash"/>
+        </UniformGrid>
+    </Grid>
+</Window>
