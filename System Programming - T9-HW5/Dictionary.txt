@@ -5,7 +5,4 @@ car
 computer
 dog
 elephant
-A
-АРТ
-АРБУЗ
 BUS
