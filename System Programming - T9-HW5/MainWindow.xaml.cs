@@ -329,7 +329,7 @@ namespace System_Programming___T9_HW5
                     {
                         // Если нет, добавляем его в список добавляемых слов
                         addedWords.Add(word);
-                        dictionary.Add(word); // Добавляем в словарь
+                        dictionary.Add(word); 
                     }
                 }
 
